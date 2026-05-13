@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/render.js": {
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/render"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/api/render?path=:path*"
+    }
+  ]
+}

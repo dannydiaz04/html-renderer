@@ -1,0 +1,21 @@
+{
+  "name": "html-renderer",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel deploy --prod",
+    "test": "node --test",
+    "check": "node --check api/render.js && node --check lib/drive.js && node --check lib/validateHtml.js && node --check test/validateHtml.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "googleapis": "^171.4.0"
+  },
+  "devDependencies": {
+    "vercel": "^54.0.0"
+  }
+}
