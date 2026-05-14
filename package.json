@@ -4,10 +4,10 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "vercel dev",
+    "dev": "node scripts/local-server.js",
     "deploy": "vercel deploy --prod",
     "test": "node --test",
-    "check": "node --check api/render.js && node --check lib/drive.js && node --check lib/validateHtml.js && node --check test/validateHtml.test.js"
+    "check": "node --check api/render.js && node --check lib/drive.js && node --check lib/validateHtml.js && node --check scripts/local-server.js && node --check test/validateHtml.test.js"
   },
   "engines": {
     "node": ">=20"

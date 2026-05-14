@@ -29,7 +29,7 @@ RENDER_KEY=
 npm.cmd install
 npm.cmd run check
 npm.cmd test
-npx.cmd vercel dev
+npm.cmd run dev
 ```
 
 PowerShell may block `npm.ps1` on Windows, so use `npm.cmd` and `npx.cmd`.
