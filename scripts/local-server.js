@@ -1,9 +1,10 @@
 import { createServer } from 'node:http';
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import handler from '../api/render.js';
 
 loadEnvFile('.env.local');
+
+const { default: handler } = await import('../api/render.js');
 
 const port = Number(process.env.PORT || 3000);
 const host = process.env.HOST || '127.0.0.1';
